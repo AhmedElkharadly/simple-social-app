@@ -1,0 +1,16 @@
+.rcButton{
+    background-color: transparent;
+    border-radius: 15px;
+    border:none;
+    font-family: 'cairo';
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+    letter-spacing: .5px;
+}
+.rcButton:hover{
+    color: #8EA7E9;
+    scale: 1.01;
+    cursor: pointer;
+    transition: .4s ;
+}
