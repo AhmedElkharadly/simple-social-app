@@ -1,0 +1,31 @@
+.rp_header {
+  right: 0;
+  position: fixed;
+  padding: 0 10px;
+  border-left: 1px solid #9d9d9d3a;
+}
+
+.rp_content {
+  top: 0;
+  padding: 0.1em;
+  position: sticky;
+  height: 100vh;
+}
+.rp_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: start;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+.catContainer {
+  transition: 1s;
+  padding: 10px;
+  width: 23vw;
+  background-color: #5353531a;
+  color: rgb(0, 0, 0);
+  /* height: 85vh; */
+  border-radius: 2em;
+}

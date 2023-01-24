@@ -4,12 +4,12 @@ const INITIAL_STATE = {
 };
 
 export function getPostCommentsReducer(state = INITIAL_STATE, action) {
-  console.log(action.type);
+  // console.log(action.type);
   switch (action.type) {
     case SET_GET_PostComment:
       return {
         ...state,
-        PostComments: action.payload,
+        postComments: action.payload,
       };
     default:
       return state;

@@ -11,12 +11,17 @@ function App() {
   useEffect(() => {
     dispatch(getPosts());
   }, []);
-  console.log(posts);
+  // console.log(posts);
   return (
-    <div className="App">
+    <>
       <Header />
+      
+      <div className="App"> 
+
       <Home />
-    </div>
+      </div>
+
+    </>
   );
 }
 

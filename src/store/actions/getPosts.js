@@ -9,6 +9,6 @@ export const getPosts=() => async (dispatch) => {
       payload: res?.data,
     });
   } catch (err) {
-    return console.log("dataerr", err);
+    return console.log("dataErr", err);
   }
 };

@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 };
 
 export function getPostsReducer(state = INITIAL_STATE, action) {
-  console.log(action.type);
+  // console.log(action.type);
   switch (action.type) {
     case SET_GET_Posts:
       return {

@@ -1,19 +1,19 @@
 body {
   font-family: "Cairo";
   font-weight: 900;
+  background-color: #E5E0FF;
 }
 .App {
-  margin: 10px;
-  border-radius: 20px;
+  margin-top: 5rem;
+
+  /* border-radius: 20px; */
   /* border: 1px solid black; */
-  background-color: #E5E0FF;
-  height: calc(100vh - 20px);
+  /* height: calc(100vh - 20px); */
 }
 
 
 .logo5{
-  width: 39px;
-  height: 39px;
+  width: 2rem;
   padding: 6px;
   justify-content: center;
   align-items: center;

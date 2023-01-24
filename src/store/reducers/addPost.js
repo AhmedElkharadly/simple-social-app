@@ -5,7 +5,7 @@ const INITIAL_STATE = {
   };
   
 export function addPostReducer(state = INITIAL_STATE, action) {
-    console.log(action.type);
+    // console.log(action.type);
     switch (action.type) {
       case SET_ADD_Post:
         return {
