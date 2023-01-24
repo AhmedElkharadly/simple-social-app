@@ -15,9 +15,9 @@ function Header() {
   };
   const handleShow = () => setShow(true);
   return (
-    <div className="d-flex justify-content-between align-items-center ">
+    <div className="d-flex justify-content-between align-items-center p-4">
       <section>{twiticon}</section>
-      <h1>Title</h1>
+      <h1>Objects SocialApp</h1>
       <CustButton
         h="3em"
         w="10em"
