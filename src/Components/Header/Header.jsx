@@ -11,7 +11,7 @@ function Header() {
 
   const handleClose = () => {
     setShow(false)
-    navigate('/posts')
+    navigate('/')
   };
   const handleShow = () => setShow(true);
   return (
@@ -25,7 +25,7 @@ function Header() {
         HBC={handleShow}
         bgColor="black"
       />
-          <PostForm show={show} handleClose={handleClose} handleShow={handleShow} />
+          <PostForm show={show} handleClose={handleClose}  handleShow={handleShow} />
       
     </div>
   );

@@ -39,3 +39,7 @@
  border: 1px solid #828dbb77;
  border-radius: 1rem;
 }
+
+@media screen and (max-width: 765px) {
+  
+}

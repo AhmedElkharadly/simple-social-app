@@ -5,7 +5,7 @@ import { commentIc, likeIc, shareIc } from "../svg";
 export default function PostCard(props) {
   return (
     <>
-      <div className="post py-4 px-2 mx-3">
+      <div onClick={props.gotoPostDetails} className="post py-4 px-2 mx-3">
         <div className="photo avatar">
           <img
             alt="Avatar"

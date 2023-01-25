@@ -14,9 +14,11 @@ export default function PostForm(props) {
     userId: 1,
   });
   const [image, setImage] = useState([]);
+  const navigate = useNavigate();
 
-  const dispach = useDispatch()
-  const navigate = useNavigate()
+  const [display, sitDisplay] = useState(false);
+
+  const dispach = useDispatch();
 
   const onImageChange = (e) => {
     setImage([...e.target.files]);
@@ -24,23 +26,37 @@ export default function PostForm(props) {
   const deleteImage = (e) => {
     setImage([]);
   };
-  
+
   const handleTitleChange = (e) => {
     setInputs({
       ...inputs,
       title: e.target.value,
-    })
-  }
+    });
+    sitDisplay(false);
+  };
   const handleBodyChange = (e) => {
     setInputs({
       ...inputs,
       body: e.target.value,
-    })
-  }
+    });
+    sitDisplay(false);
+  };
+
+  const discard = () => {
+    setInputs({ ...inputs, title: "", body: "" });
+    return;
+  };
 
   const handleSubmit = () => {
-    dispach(addPost(inputs))
-  }
+    if (inputs.title && inputs.body)
+      return (
+        dispach(addPost(inputs)),
+        navigate("/"),
+        props.handleClose(),
+        setInputs({ ...inputs, title: "", body: "" })
+      );
+    else sitDisplay(true);
+  };
 
   return (
     <>
@@ -50,22 +66,31 @@ export default function PostForm(props) {
             <Modal.Title>Post</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+            <div
+              className={
+                display ? "alert alert-danger displayed" : "notDisplayed"
+              }
+            >
+              Please Fill the Title and the Body of your Post
+            </div>
             <div className="mb-3">
               <label htmlFor="assetName" className="form-label">
                 Title
               </label>
               <input
+                required
                 type="email"
                 className="form-control"
                 id="assetName"
                 placeholder="Title"
                 value={inputs.title}
                 onChange={handleTitleChange}
-                />
+              />
               <label htmlFor="assetQuantity" className="form-label">
-                Describe
+                Body
               </label>
               <textarea
+                required
                 type="email"
                 className="form-control"
                 id="assetQuantity"
@@ -83,7 +108,7 @@ export default function PostForm(props) {
                   <span onClick={deleteImage}>{deleteIc}</span>
                 </b>
               ) : (
-                <b>Upload Image</b>
+                <b className="upaimage">Upload Image</b>
               )}
             </label>
             <input
@@ -95,7 +120,11 @@ export default function PostForm(props) {
             />
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={props.handleClose}>
+            <Button
+              variant="secondary"
+              onMouseUp={props.handleClose}
+              onClick={discard}
+            >
               Discard
             </Button>
             <Button

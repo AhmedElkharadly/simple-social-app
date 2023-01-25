@@ -6,6 +6,7 @@
     /* margin: auto; */
 }
 .post:hover{
+    cursor: pointer;
     background-color: #5353531a;
     transition: .2s ease-in-out;
 }
@@ -64,7 +65,7 @@
     display: flex;
     justify-content: center;
     border-radius: 2em;
-    width: 25rem;
+    width: 27rem;
     
 }
 
@@ -86,3 +87,29 @@
 .textTitle{
     font-size: large;
 }
+
+
+@media screen and (max-width: 966px) {
+}
+
+@media screen and (max-width: 765px) {
+    .imgg{
+        width: 90%;
+    }
+    .post{
+        width: 100vw;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+      .post{
+          width: 100vw;
+          margin: 0;
+      }
+  }
+  
+  @media screen and (max-width: 320) {
+
+  }
+  

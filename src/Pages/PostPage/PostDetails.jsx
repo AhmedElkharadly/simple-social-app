@@ -12,19 +12,19 @@ import { getOnePostComments } from "../../store/actions/getComments";
 export default function PostDetails() {
   const dispach = useDispatch();
   const params = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [checker, setChecker] = useState(0);
   const getPost = useSelector((state) => state.posts.post);
   const comments = useSelector((state) => state.postComment.postComments);
 
   const handleChecker = () => {
     if (getPost == {} || comments == [])
-      return dispach(getOnePostComments(params.id)), console.log(getPost);
+      return dispach(getOnePostComments(params.id));
     else setChecker(checker + 1);
   };
-  const handleBackButton =( )=>{
-    navigate("/posts")
-  }
+  const handleBackButton = () => {
+    navigate("/");
+  };
   useEffect(() => {
     dispach(getOnePost(params.id));
   }, []);
@@ -34,8 +34,15 @@ export default function PostDetails() {
 
   return (
     <>
-    <CustButton HBC={handleBackButton} margin="20px"  name="Home" bgColor="black" w="200px" h="40px" />
-      <div className="cardDetailsContainer  flex-wrap">
+      <div className="cardDetailsContainer flex-wrap">
+        <CustButton
+          HBC={handleBackButton}
+          margin="20px"
+          name="Home"
+          bgColor="black"
+          w="200px"
+          h="40px"
+        />
         <div className="d-flex align-items-center w-100 flex-wrap justify-content-center">
           <img
             className="sideImge"
@@ -52,7 +59,6 @@ export default function PostDetails() {
         <div className="d-flex flex-column px-5 py-3 ">
           <h4>Comments</h4>
           {comments.map((myComment) => {
-            console.log(myComment);
             return (
               <div className="p-2 px-4 commentTable" key={myComment.id}>
                 <AvatarName name={myComment.name} email={myComment.email} />
