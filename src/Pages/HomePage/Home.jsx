@@ -25,7 +25,7 @@ export default function Home() {
           return (
             <div  key={post.id}>
               <PostCard
-                comments={() => navigate(`/posts/${post.id}`)}
+                gotoPostDetails={() => navigate(`/posts/${post.id}`)}
                 title={post.title}
                 body={post.body}
               />

@@ -19,7 +19,7 @@ function App() {
       <Header />
       <div className="App">
       <Routes>
-          <Route exact path="posts" element={<Home />} />
+          <Route exact path="/" element={<Home />} />
             <Route path="/posts/:id" element={<PostDetails />} />
             <Route  path="*" element={<h1>Error 404 Not Found</h1>}/>
         </Routes>

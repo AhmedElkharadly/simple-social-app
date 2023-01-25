@@ -34,3 +34,16 @@
 .modal-backdrop{
   opacity: .1 !important;
 }
+
+.upaimage{
+  cursor: pointer;
+}
+
+.displayed{
+  display: block;
+}
+
+.notDisplayed{
+  display: none;
+
+}
