@@ -1,0 +1,18 @@
+.formContainer {
+  top: 0;
+  z-index: 9;
+  width: 100vw;
+  display: grid;
+  position: fixed;
+  align-items: center;
+  justify-items: space-around;
+  grid-template-columns: 2fr 8fr 1fr 1fr;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background-blend-mode: overlay;
+  padding: 0 25px 0 15px ;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+}

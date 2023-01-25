@@ -15,8 +15,8 @@ export default function PostForm(props) {
 
   return (
     <>
-      <Modal show={props.show} onHide={props.handleClose}>
-          <form>
+      <Modal className="formContainer" show={props.show} onHide={props.handleClose}>
+          <form >
         <Modal.Header closeButton>
           <Modal.Title>Post</Modal.Title>
         </Modal.Header>

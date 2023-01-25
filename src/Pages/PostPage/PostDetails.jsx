@@ -7,6 +7,7 @@ import { NavLink, useParams } from "react-router-dom";
 import CustButton from "../../Components/Button/Button";
 import CommentsCart from "../../Components/CommentsCart/CommentsCart";
 import AvatarName from "../../Components/AvatarName/AvatarName";
+import { getOnePostComments } from "../../store/actions/getComments";
 
 export default function PostDetails() {
   const dispach = useDispatch();
@@ -18,7 +19,7 @@ export default function PostDetails() {
   const handleChecker = () => {
     if (getPost == {} || comments == [])
       return (
-        dispach(getOnePost(params.id)),
+        dispach(getOnePostComments(params.id)),
         // dispach(getOnePost(params.id)),
         console.log(getPost)
       );
@@ -35,7 +36,7 @@ export default function PostDetails() {
       <NavLink className="Back" to="/posts">
         All Posts
       </NavLink>
-      <div className="cardDetailsContainer">
+      <div className="cardDetailsContainer  flex-wrap">
         <div className="d-flex align-items-center w-100 justify-content-center">
           <img
             className="sideImge"
@@ -44,21 +45,20 @@ export default function PostDetails() {
           />
 
           <div className="detailsContainer">
-            <AvatarName/>
+            <AvatarName />
             <h2>{getPost.title}</h2>
             <p>{getPost.body}</p>
           </div>
-          {comments.map((myComment, index) => {
-            return index > 2 ? (
-              <div key={myComment.id}>
-                <CommentsCart
-                  name={myComment.name}
-                  email={myComment.email}
-                  body={myComment.body}
-                />
+        </div>
+        <div className="d-flex flex-column px-3 ">
+          <h4>Comments</h4>
+          {comments.map((myComment) => {
+            console.log(myComment);
+            return (
+              <div className="p-3" key={myComment.id}>
+                <AvatarName name={myComment.name} email={myComment.email} />
+                <div className="px-5">{myComment.body}</div>
               </div>
-            ) : (
-              ""
             );
           })}
         </div>
