@@ -1,7 +1,7 @@
 body {
   font-family: "Cairo";
   font-weight: 900;
-  background-color: #E5E0FF;
+  background-color: #e5e0ff;
 }
 .App {
   margin-top: 5rem;
@@ -10,19 +10,20 @@ body {
   /* border: 1px solid black; */
   /* height: calc(100vh - 20px); */
 }
-
-
-.logo5{
+* {
+  font-family: "Cairo";
+}
+.logo5 {
   width: 2rem;
   padding: 6px;
   justify-content: center;
   align-items: center;
 }
 
-.logo5:hover{
+.logo5:hover {
   cursor: pointer;
-  fill: #7286D3;
+  fill: #7286d3;
   background-color: #1da0f217;
   border-radius: 50px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }

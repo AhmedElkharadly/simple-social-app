@@ -1,5 +1,6 @@
 import Header from "./Components/Header/Header";
 import "./App.css";
+import "@fontsource/cairo";
 import Home from "./Pages/HomePage/Home";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -18,10 +19,10 @@ function App() {
     <>
       <Header />
       <div className="App">
-      <Routes>
+        <Routes>
           <Route exact path="/" element={<Home />} />
-            <Route path="/posts/:id" element={<PostDetails />} />
-            <Route  path="*" element={<h1>Error 404 Not Found</h1>}/>
+          <Route path="/posts/:id" element={<PostDetails />} />
+          <Route path="*" element={<h1>Error 404 Not Found</h1>} />
         </Routes>
       </div>
     </>
