@@ -15,7 +15,7 @@ export function getPostsReducer(state = INITIAL_STATE, action) {
     case SET_GET_Post:
       return {
         ...state,
-        Post: action.payload,
+        post: action.payload,
       };
     default:
       return state;

@@ -1,8 +1,24 @@
 .commentStyle{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding: 5px;
-    margin: 8px;
-    border: 3px solid #828dbbd3;
+    margin: 5px;
+    border: 3px solid #828dbb77;
+    font-size: 70%;
     border-radius: 2rem;
+    width: 20vw;
+}
+.commentStyle:hover{
+    border: 3px solid #828dbb;
+    transition: .6s;
+}
+
+.name{
+    width: 10vw;
+}
+
+.usernamee{
+    width: 10vw;
+    color: gray;
 }

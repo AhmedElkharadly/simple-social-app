@@ -37,7 +37,6 @@ export default function PostCard(props) {
             <span onClick={props.comments}>{commentIc}</span>
              {shareIc}
           </div>
-          {/* <div className="h-50">Comments</div> */}
         </div>
       </div>
     </>

@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPosts } from "../../store/actions/getPosts";
 import CommentsCart from "../../Components/CommentsCart/CommentsCart";
 import { getOnePost } from "../../store/actions/getComments";
+import { Link } from "react-router-dom";
 // import { lazy, Suspense } from 'react'
 // const PostCard = lazy(()=> import("../../Components/PostCard/PostCard"))
 
@@ -18,6 +19,8 @@ export default function Home() {
   useEffect(() => {
     dispatch(getPosts());
   }, []);
+
+  console.log(postId)
 
   useEffect(() => {
     dispatch(getOnePost(postId))
@@ -47,7 +50,7 @@ export default function Home() {
       <div className="rp_header">
         <div className="rp_content">
           <div className="catContainer d-flex flex-column align-items-center">
-            <h3>Post Comments</h3>
+            <h4>Post Comments</h4>
             {postComments.map((myComment, index) => {
               return index > 2 ? (
                 <div key={myComment.id}>
@@ -61,6 +64,7 @@ export default function Home() {
                 ""
               );
             })}
+          {postId ? <Link className="showMore" to={'/posts/' + postId}>Show All ...</Link> : ""}
           </div>
         </div>
       </div>
