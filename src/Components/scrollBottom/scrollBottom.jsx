@@ -4,9 +4,7 @@ import { FaAngleDown } from "react-icons/fa";
 import "./scrollBottom.css";
 
 const ScrollToBottom = () => {
-  const [showTopBtn, setShowTopBtn] = useState(
-    document.body.offsetHeight > 700 ? true : false
-  );
+  const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY < 400) {
@@ -15,13 +13,18 @@ const ScrollToBottom = () => {
         setShowTopBtn(false);
       }
     });
+    if (document.body.offsetHeight > 700) {
+      setShowTopBtn(true);
+    }
   }, []);
+  useEffect(() => {
+    setShowTopBtn(true);
+  }, [document.body.offsetHeight > 700]);
   const goToTop = () => {
     window.scrollTo({
       top: document.body.offsetHeight,
       behavior: "smooth",
     });
-    console.log("down");
   };
   return (
     <div className="btm-to-top">
