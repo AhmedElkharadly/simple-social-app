@@ -6,7 +6,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPosts } from "../../store/actions/getPosts";
 import PostCard from "../../Components/PostCard/PostCard";
 import { useNavigate } from "react-router-dom";
-
+import ScrollToTop from "../../Components/scrollUP/scrollUp";
+import ScrollToBottom from "../../Components/scrollBottom/scrollBottom";
 export default function Home() {
   const dispatch = useDispatch();
   const [postId, setPostId] = useState();
@@ -21,17 +22,19 @@ export default function Home() {
 
   return (
     <div className="w-100 d-flex flex-column align-items-center ">
-        {posts.map((post) => {
-          return (
-            <div  key={post.id}>
-              <PostCard
-                gotoPostDetails={() => navigate(`/posts/${post.id}`)}
-                title={post.title}
-                body={post.body}
-              />
-            </div>
-          );
-        })}
+      <ScrollToBottom />
+      <ScrollToTop />
+      {posts.map((post) => {
+        return (
+          <div key={post.id}>
+            <PostCard
+              gotoPostDetails={() => navigate(`/posts/${post.id}`)}
+              title={post.title}
+              body={post.body}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
