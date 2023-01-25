@@ -62,9 +62,7 @@
       justify-content: center;
     }
   
-    .sideImgeContainer {
-      order: 1;
-    }
+
   
 
   }
@@ -73,4 +71,13 @@
     .sideImge {
       scale: 0.9;
     }
+  }
+
+  .commentTable{
+
+    border-bottom: 1px solid rgba(201, 201, 201, 0.7);
+  }
+  .commentTable:hover{
+    background-color: rgba(186, 186, 186, 0.359);
+    transition: .9s;
   }

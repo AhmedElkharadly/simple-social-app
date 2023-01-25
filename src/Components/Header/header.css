@@ -1,7 +1,16 @@
-.header{
-    background-color: #828dbbd3;
+.header {
+  background: linear-gradient(
+    135deg,
+    rgba(90, 107, 166, 0.1),
+    rgba(157, 163, 237, 0.131)
+  ) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(30px) !important;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.37) !important;
+  border: 1px solid rgba(154, 170, 238, 0.18) !important;
+  
 }
 
-.title{
-    font-family: cursive;
+.title {
+  font-family: fantasy;
 }

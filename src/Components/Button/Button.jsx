@@ -13,7 +13,8 @@ function CustButton(props) {
         height: props.h,
         fontSize: props.fSize,
         fontFamily: props.fFamily,
-        padding: props.pad
+        padding: props.pad,
+        margin: props.margin
       }}
       type={props.type}
       onClick={(()=>{props.HBC()})}
