@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleDown } from "react-icons/fa";
 
+// import { FaAngleDown } from "react-icons-fa";
 import "./scrollBottom.css";
 
 const ScrollToBottom = () => {

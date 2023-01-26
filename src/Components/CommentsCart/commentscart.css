@@ -22,3 +22,10 @@
     width: 10vw;
     color: gray;
 }
+
+@media screen and (max-width: 400) {
+    .commentStyle{
+        width: 10vw;
+    }
+    
+}

@@ -56,11 +56,11 @@ export default function PostDetails() {
             <p>{getPost.body}</p>
           </div>
         </div>
-        <div className="d-flex flex-column px-5 py-3 ">
+        <div className="d-flex flex-column px-2 py-3 ">
           <h4>Comments</h4>
           {comments.map((myComment) => {
             return (
-              <div className="p-2 px-4 commentTable" key={myComment.id}>
+              <div className="p-2 px- commentTable" key={myComment.id}>
                 <AvatarName name={myComment.name} email={myComment.email} />
                 <div className="px-5">{myComment.body}</div>
               </div>

@@ -4,7 +4,7 @@ import './commentscart.css'
 
 export default function CommentsCart(props) {
   return (
-    <div className='p-3 commentStyle'>
+    <div className='p-2 commentStyle'>
         <div className="d-flex  flex-row align-items-center">
           <img
             alt="Avatar"
